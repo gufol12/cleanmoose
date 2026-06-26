@@ -55,28 +55,33 @@ export function BeforeAfterSlider({
       onPointerUp={onPointerUp}
       onPointerLeave={onPointerUp}
     >
-      {/* Before image (full background) */}
-      <img
-        src={beforeSrc}
-        alt={beforeAlt}
-        width={1024}
-        height={768}
-        loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover"
-        draggable={false}
-      />
-
-      {/* After image (overlay, opacity driven by slider) */}
+      {/* After image (full width, background) */}
       <img
         src={afterSrc}
         alt={afterAlt}
         width={1024}
         height={768}
         loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover transition-opacity duration-75 ease-out"
-        style={{ opacity: position / 100 }}
+        className="h-full w-full object-cover"
         draggable={false}
       />
+
+      {/* Before image (clipped width) */}
+      <div
+        className="absolute inset-y-0 left-0 overflow-hidden"
+        style={{ width: `${position}%` }}
+      >
+        <img
+          src={beforeSrc}
+          alt={beforeAlt}
+          width={1024}
+          height={768}
+          loading="lazy"
+          className="h-full w-full object-cover"
+          style={{ width: `${100 / (position / 100 || 1)}%`, maxWidth: "none" }}
+          draggable={false}
+        />
+      </div>
 
       {/* Divider line + handle */}
       <div
