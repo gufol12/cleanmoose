@@ -48,39 +48,35 @@ export function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className="relative w-full select-none overflow-hidden rounded-2xl ring-1 ring-border"
+      className="relative w-full select-none overflow-hidden rounded-2xl ring-1 ring-border aspect-[4/3]"
       style={{ cursor: isDragging ? "ew-resize" : "default" }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerLeave={onPointerUp}
     >
-      {/* After image (full width, background) */}
+      {/* Before image (full background) */}
+      <img
+        src={beforeSrc}
+        alt={beforeAlt}
+        width={1024}
+        height={768}
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+        draggable={false}
+      />
+
+      {/* After image (overlay, opacity driven by slider) */}
       <img
         src={afterSrc}
         alt={afterAlt}
         width={1024}
         height={768}
         loading="lazy"
-        className="aspect-[4/3] w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover transition-opacity duration-75 ease-out"
+        style={{ opacity: position / 100 }}
         draggable={false}
       />
-
-      {/* Before image (clipped width) */}
-      <div
-        className="absolute inset-y-0 left-0 overflow-hidden"
-        style={{ width: `${position}%` }}
-      >
-        <img
-          src={beforeSrc}
-          alt={beforeAlt}
-          width={1024}
-          height={768}
-          loading="lazy"
-          className="aspect-[4/3] h-full w-full object-cover"
-          draggable={false}
-        />
-      </div>
 
       {/* Divider line + handle */}
       <div
