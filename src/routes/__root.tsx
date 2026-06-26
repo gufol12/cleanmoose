@@ -77,20 +77,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Clean Moose — Profesjonalne Czyszczenie Tapicerki Modlnica" },
+      {
+        name: "description",
+        content:
+          "Pranie tapicerki samochodowej, czyszczenie dywanów i mebli oraz ozonowanie w Modlnicy i okolicach. Dojazd do klienta, jakość premium.",
+      },
+      { name: "author", content: "Clean Moose" },
+      { property: "og:title", content: "Clean Moose — Czyszczenie Tapicerki Modlnica" },
+      {
+        property: "og:description",
+        content:
+          "Pranie tapicerki samochodowej, czyszczenie dywanów i mebli, ozonowanie. Modlnica i okolice.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap",
       },
+      { rel: "stylesheet", href: appCss },
     ],
   }),
   shellComponent: RootShell,
@@ -98,6 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
+
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
