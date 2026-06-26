@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import heroSeat from "@/assets/hero-seat.jpg";
 import serviceCar from "@/assets/service-car.jpg";
 import serviceSofa from "@/assets/service-sofa.jpg";
 import serviceOzone from "@/assets/service-ozone.jpg";
+import beforeSeat from "@/assets/before-seat.jpg";
+import afterSeat from "@/assets/after-seat.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
