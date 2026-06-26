@@ -231,6 +231,29 @@ function Index() {
           </div>
         </section>
 
+        {/* Before / After */}
+        <section className="bg-surface-elevated py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-12 flex flex-col items-start gap-4">
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-moss">
+                Efekty naszej pracy
+              </span>
+              <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+                Zobacz różnicę na własne oczy
+              </h2>
+              <p className="max-w-[60ch] text-pretty text-muted-foreground">
+                Przesuń suwak, aby porównać stan tapicerki przed i po profesjonalnym czyszczeniu ekstrakcyjnym.
+              </p>
+            </div>
+            <BeforeAfterSlider
+              beforeSrc={beforeSeat}
+              afterSrc={afterSeat}
+              beforeAlt="Tapicerka samochodowa przed czyszczeniem – widoczne plamy i zabrudzenia"
+              afterAlt="Tapicerka samochodowa po czyszczeniu – czysta i odświeżona"
+            />
+          </div>
+        </section>
+
         {/* Trust */}
         <section id="o-nas" className="py-24">
           <div className="mx-auto max-w-7xl px-6">
