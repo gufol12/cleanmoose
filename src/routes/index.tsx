@@ -6,6 +6,7 @@ import serviceSofa from "@/assets/service-sofa.jpg";
 import serviceOzone from "@/assets/service-ozone.jpg";
 import beforeSeat from "@/assets/before-seat.jpg";
 import afterSeat from "@/assets/after-seat-matched.jpg";
+import logo from "@/assets/clean-moose-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
