@@ -63,25 +63,17 @@ export function BeforeAfterSlider({
         draggable={false}
       />
 
-      {/* After image – clipped by width */}
-      <div
-        className="absolute inset-y-0 left-0 overflow-hidden"
-        style={{ width: `${position}%` }}
-      >
-        <img
-          src={afterSrc}
-          alt={afterAlt}
-          width={1024}
-          height={768}
-          loading="lazy"
-          className="h-full w-full object-cover"
-          style={{
-            width: containerRef.current ? `${containerRef.current.offsetWidth}px` : "100%",
-            maxWidth: "none",
-          }}
-          draggable={false}
-        />
-      </div>
+      {/* After image – clipped to right side */}
+      <img
+        src={afterSrc}
+        alt={afterAlt}
+        width={1024}
+        height={768}
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+        draggable={false}
+      />
 
       {/* Divider line + handle */}
       <div
