@@ -414,8 +414,7 @@ function Index() {
           <div className="grid gap-12 md:grid-cols-3">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <div className="size-5 rounded-sm bg-brand-moss" />
-                <span className="text-base font-semibold">Clean Moose</span>
+                <img src={logo.url} alt="Clean Moose" className="h-8 w-auto" width={160} height={64} />
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Najwyższej klasy usługi czyszczenia ekstrakcyjnego dla wymagających klientów w Modlnicy i okolicach Krakowa.
