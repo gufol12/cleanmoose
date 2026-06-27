@@ -52,10 +52,10 @@ export function BeforeAfterSlider({
       onPointerUp={onPointerUp}
       onPointerLeave={onPointerUp}
     >
-      {/* Before image – full background */}
+      {/* After image – full background (right side) */}
       <img
-        src={beforeSrc}
-        alt={beforeAlt}
+        src={afterSrc}
+        alt={afterAlt}
         width={1024}
         height={768}
         loading="lazy"
@@ -63,14 +63,14 @@ export function BeforeAfterSlider({
         draggable={false}
       />
 
-      {/* After image – clipped by width */}
+      {/* Before image – clipped by width (left side) */}
       <div
         className="absolute inset-y-0 left-0 overflow-hidden"
         style={{ width: `${position}%` }}
       >
         <img
-          src={afterSrc}
-          alt={afterAlt}
+          src={beforeSrc}
+          alt={beforeAlt}
           width={1024}
           height={768}
           loading="lazy"
