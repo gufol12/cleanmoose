@@ -6,6 +6,7 @@ import serviceSofa from "@/assets/service-sofa.jpg";
 import serviceOzone from "@/assets/service-ozone.jpg";
 import beforeSeat from "@/assets/before-seat.jpg";
 import afterSeat from "@/assets/after-seat-matched.jpg";
+import logo from "@/assets/clean-moose-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -115,8 +116,8 @@ function Index() {
       <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
           <a href="#" className="flex items-center gap-3">
-            <div className="size-6 rounded-sm bg-brand-moss" />
-            <span className="text-lg font-semibold tracking-tight">Clean Moose</span>
+            <img src={logo.url} alt="Clean Moose" className="h-10 w-auto" width={200} height={80} />
+            <span className="sr-only">Clean Moose</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
             <a href="#uslugi" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
@@ -413,8 +414,7 @@ function Index() {
           <div className="grid gap-12 md:grid-cols-3">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <div className="size-5 rounded-sm bg-brand-moss" />
-                <span className="text-base font-semibold">Clean Moose</span>
+                <img src={logo.url} alt="Clean Moose" className="h-8 w-auto" width={160} height={64} />
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Najwyższej klasy usługi czyszczenia ekstrakcyjnego dla wymagających klientów w Modlnicy i okolicach Krakowa.
