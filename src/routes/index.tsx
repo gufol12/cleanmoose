@@ -114,7 +114,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-auto max-w-7xl items-center justify-between px-6 py-5">
+        <div className="mx-auto flex h-auto max-w-7xl items-center justify-between px-6 py-2">
           <a href="#" className="flex items-center gap-3">
             <img src={logo.url} alt="Clean Moose" className="h-[100px] w-auto" width={500} height={200} />
             <span className="sr-only">Clean Moose</span>
