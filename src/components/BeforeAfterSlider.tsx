@@ -77,11 +77,17 @@ export function BeforeAfterSlider({
 
       {/* Divider line + handle */}
       <div
+        role="slider"
+        aria-label="Przesuń, aby porównać efekt przed i po"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(position)}
+        tabIndex={0}
         className="absolute inset-y-0 z-10 w-px bg-white/90 shadow-lg"
         style={{ left: `${position}%`, transform: "translateX(-50%)" }}
       >
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 grid size-12 place-items-center rounded-full bg-white shadow-[var(--shadow-card)] ring-1 ring-border">
-          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="text-brand-moss">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="text-brand-moss" aria-hidden="true">
             <path d="M5 4L2 8L5 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M11 4L14 8L11 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

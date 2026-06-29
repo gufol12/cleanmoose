@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://moose-sparkle-site.lovable.app/sitemap.xml
