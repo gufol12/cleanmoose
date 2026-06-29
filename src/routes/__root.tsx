@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Pranie tapicerki samochodowej, czyszczenie dywanów i mebli oraz ozonowanie w Modlnicy i okolicach. Dojazd do klienta, jakość premium.",
       },
       { name: "author", content: "Clean Moose" },
-      { property: "og:title", content: "Clean Moose — Czyszczenie Tapicerki Modlnica" },
+      { property: "og:title", content: "Clean Moose — Profesjonalne Czyszczenie Tapicerki Modlnica" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Clean Moose — Profesjonalne Czyszczenie Tapicerki Modlnica" },
+      { name: "description", content: "Premium website for Clean Moose offering professional upholstery and carpet cleaning services." },
+      { property: "og:description", content: "Premium website for Clean Moose offering professional upholstery and carpet cleaning services." },
+      { name: "twitter:description", content: "Premium website for Clean Moose offering professional upholstery and carpet cleaning services." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/aa4026aa-cfbc-400d-b49e-c4afa06c9369/id-preview-b0037993--7d857819-d03f-4864-a529-44c347036a90.lovable.app-1782735787717.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/aa4026aa-cfbc-400d-b49e-c4afa06c9369/id-preview-b0037993--7d857819-d03f-4864-a529-44c347036a90.lovable.app-1782735787717.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
