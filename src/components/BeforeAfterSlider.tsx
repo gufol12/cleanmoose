@@ -45,11 +45,12 @@ export function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className="relative w-full select-none overflow-hidden rounded-2xl ring-1 ring-border aspect-[4/3]"
-      style={{ cursor: isDragging ? "ew-resize" : "default" }}
+      className="relative w-full select-none overflow-hidden rounded-2xl ring-1 ring-border aspect-[4/3] touch-none"
+      style={{ cursor: isDragging ? "ew-resize" : "default", touchAction: "none" }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
       onPointerLeave={onPointerUp}
     >
       {/* Before image – full background */}
