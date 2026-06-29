@@ -11,7 +11,7 @@ import logo from "@/assets/clean-moose-logo.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clean Moose — Profesjonalne Czyszczenie Tapicerki Modlnica" },
+      { title: "Clean Moose — Czyszczenie Tapicerki Modlnica" },
       {
         name: "description",
         content:
@@ -23,9 +23,9 @@ export const Route = createFileRoute("/")({
         content:
           "Profesjonalne pranie tapicerki samochodowej, dywanów, mebli i ozonowanie. Modlnica i okolice.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://moose-sparkle-site.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://moose-sparkle-site.lovable.app/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -218,7 +218,7 @@ function Index() {
                     className="aspect-video w-full rounded-xl object-cover"
                   />
                   <div className="flex flex-1 flex-col p-4">
-                    <h3 className="text-lg font-semibold">{s.title}</h3>
+                    <h2 className="text-lg font-semibold">{s.title}</h2>
                     <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-muted-foreground">
                       {s.desc}
                     </p>
@@ -357,6 +357,7 @@ function Index() {
                   <select
                     defaultValue=""
                     required
+                    aria-label="Rodzaj usługi"
                     className="h-12 w-full rounded-lg bg-secondary px-4 text-sm ring-1 ring-border focus:outline-none focus:ring-2 focus:ring-brand-moss"
                   >
                     <option value="" disabled>Rodzaj usługi</option>
